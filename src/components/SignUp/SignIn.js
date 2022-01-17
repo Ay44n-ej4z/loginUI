@@ -8,10 +8,10 @@ function SignIn() {
     const [userEmailReg, setUserEmailReg] = useState("");
     const [passwordReg, setPasswordReg] = useState("");
     // const [loginStatus, setLoginStatus] = useState("");
-
+    var api = "http://localhost:5000/authentication/posts"
     const register = async (e) => {
         e.preventDefault()
-        await axios.post("http://localhost:5000/authentication/posts", {
+        await axios.post(api, {
             name: userNameReg,
             email: userEmailReg,
             password: passwordReg,
